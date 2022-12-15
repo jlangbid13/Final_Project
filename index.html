@@ -37,6 +37,11 @@
 
 <body>
   
+  <div id="loaderbody">
+    <div class="loader"></div>
+  </div>
+  
+  
   <!-- ======= Header ======= -->
 
   <canvas id="mainCanvas"></canvas>
@@ -606,7 +611,15 @@
   <!-- Template Main JS File -->
 
   <script src="assets/js/main.js"></script>
-  
+  <script>
+    var header = document.getElementById("mainCanvas");
+    var preloader = document.getElementById("loaderbody");
+    header.style.display = "none";
+    setTimeout(function() {
+        preloader.style.display = "none";
+        header.style.display = "block";
+      }, 2300)
+  </script>
 
 
   
